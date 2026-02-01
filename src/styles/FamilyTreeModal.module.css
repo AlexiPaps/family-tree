@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--color-background);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  transition: all 0.15s;
+}
+
+.closeButton:hover {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.treeContainer {
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ancestors,
+.descendants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ancestorLevel,
+.descendantLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.generation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.descendantBranch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connector {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem 0;
+}
+
+.personNode {
+  padding: 0.5rem 1rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-align: center;
+  min-width: 100px;
+}
+
+.personNode.focused {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.personName {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.focusLabel {
+  font-size: 0.6875rem;
+  opacity: 0.8;
+  margin-top: 0.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.focusedPerson {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.emptyState {
+  color: var(--color-text-light);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
