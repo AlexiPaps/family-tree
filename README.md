@@ -7,7 +7,7 @@ A full-stack application for constructing simple family trees with parent-child 
 ### Prerequisites
 
 - Node.js 18+ installed
-- npm or yarn package manager
+- npm
 
 ### Installation
 
@@ -28,7 +28,7 @@ The application will be available at [http://localhost:3000](http://localhost:30
 npm test
 
 # Run tests in watch mode
-npm run test:watch
+npm run test:run
 ```
 
 ### Build for Production
