@@ -3,7 +3,6 @@ import { getPersonById, deletePerson } from '@/lib/storage';
 import { ApiResponse, Person } from '@/types';
 
 interface RouteParams {
-  request: NextRequest,
   params: Promise<{ id: string }>;
 }
 
@@ -11,6 +10,7 @@ interface RouteParams {
  * GET /api/persons/[id] - Get a single person
  */
 export async function GET(
+  request: NextRequest,
   { params }: RouteParams
 ): Promise<NextResponse<ApiResponse<Person>>> {
   try {
